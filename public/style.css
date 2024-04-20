@@ -30,7 +30,7 @@
   font-weight: 600;
 }
 .wrap .inputContainer button {
-  width: 100px;
+  width: 130px;
   height: 50px;
   background-color: #333;
   border-radius: 20px;
@@ -42,4 +42,10 @@
   font-size: 24px;
   font-weight: 600;
   margin-left: 20px;
+  transition: 0.5s ease;
+}
+.wrap .inputContainer button:hover {
+  background-color: #fff;
+  color: #333;
+  border: 2px #333 solid;
 }/*# sourceMappingURL=style.css.map */

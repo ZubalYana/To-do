@@ -11,7 +11,7 @@ mongoose.connect(`mongodb+srv://root:CdLeejqYl0BDpKLE@cluster0.raizszz.mongodb.n
     console.log(`Connected to mongoDB`)
 })
 
-const Task = mongoose.model({
+const Task = mongoose.model('Task',{
     title: String
 })
 app.post('add-task', async (req, res)=>{

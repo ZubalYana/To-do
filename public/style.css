@@ -48,4 +48,23 @@
   background-color: #fff;
   color: #333;
   border: 2px #333 solid;
+}
+.wrap #taskContainer {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 20px;
+}
+.wrap #taskContainer .task {
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px #333 solid;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.wrap #taskContainer .task .task_title {
+  font-size: 20px;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

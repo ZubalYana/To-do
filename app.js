@@ -14,7 +14,7 @@ mongoose.connect(`mongodb+srv://root:CdLeejqYl0BDpKLE@cluster0.raizszz.mongodb.n
 const Task = mongoose.model('Task',{
     title: String
 })
-app.post('add-task', async (req, res)=>{
+app.post('/add-task', async (req, res)=>{
     try{
         const {title} = req.body;
         const task = new Task({title});
@@ -25,7 +25,14 @@ app.post('add-task', async (req, res)=>{
     }
 
 })
-
+app.get('/tasks', async (req,res)=>{
+    try{
+        const tasks = await Task.find();
+        res.json(tasks);
+    }catch(err){
+        res.status(500).json({message: err});
+    }
+})
 app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })

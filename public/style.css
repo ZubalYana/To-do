@@ -58,6 +58,10 @@
 .wrap .header .header_languageAndThemeCon .header_themeChanger {
   width: 45px;
   cursor: pointer;
+  transition: 1s ease;
+}
+.wrap .header .header_languageAndThemeCon .header_themeChanger:hover {
+  transform: rotate(360deg);
 }
 .wrap .inputContainer {
   display: flex;

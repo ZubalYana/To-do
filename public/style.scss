@@ -55,6 +55,10 @@
             .header_themeChanger{
                 width: 45px;
                 cursor: pointer;
+                transition: 1s ease;
+            }
+            .header_themeChanger:hover{
+                transform: rotate(360deg);
             }
         }
 

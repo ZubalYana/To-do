@@ -22,3 +22,12 @@ $('#addTask').click(()=>{
         location.href = '/';
     })
 })
+
+$('.addNewTask').hover(
+    () => {
+        $('.addNewTask_Plus').css('transform', 'rotate(360deg)');
+    },
+    () => {
+        $('.addNewTask_Plus').css('transform', 'rotate(0deg)');
+    }
+);

@@ -34,7 +34,6 @@
 .wrap .header .header_title {
   font-size: 32px;
   font-weight: 300;
-  cursor: pointer;
   transition: 0.1s ease;
 }
 .wrap .header .header_title:hover {
@@ -48,6 +47,11 @@
   font-size: 28px;
   font-weight: 500;
   color: #6D87E2;
+  cursor: pointer;
+}
+.wrap .header .header_themeChanger {
+  width: 45px;
+  cursor: pointer;
 }
 .wrap .inputContainer {
   display: flex;

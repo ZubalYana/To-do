@@ -39,18 +39,25 @@
             margin-bottom: 15px;
 
         }
-        #header_language{
-            border: none;
-            outline: none;
-            font-size: 28px;
-            font-weight: 500;
-            color: #6D87E2;
-            cursor: pointer;
+        .header_languageAndThemeCon{
+            width: 151px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #header_language{
+                border: none;
+                outline: none;
+                font-size: 28px;
+                font-weight: 500;
+                color: #6D87E2;
+                cursor: pointer;
+            }
+            .header_themeChanger{
+                width: 45px;
+                cursor: pointer;
+            }
         }
-        .header_themeChanger{
-            width: 45px;
-            cursor: pointer;
-        }
+
     }
     .inputContainer{
         display: flex;

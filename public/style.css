@@ -23,7 +23,6 @@
   padding: 18px;
 }
 .wrap .header .logo {
-  width: 140px;
   font-size: 36px;
   font-weight: 600;
   cursor: pointer;
@@ -31,6 +30,24 @@
 }
 .wrap .header .logo:hover {
   margin-bottom: 15px;
+}
+.wrap .header .header_title {
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.wrap .header .header_title:hover {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.wrap .header #header_language {
+  border: none;
+  outline: none;
+  font-size: 28px;
+  font-weight: 500;
+  color: #6D87E2;
 }
 .wrap .inputContainer {
   display: flex;

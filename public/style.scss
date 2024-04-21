@@ -20,15 +20,32 @@
         color: #6D87E2;
         padding: 18px;
         .logo{
-            width: 140px;
             font-size: 36px;
             font-weight: 600;
             cursor: pointer;
             transition: 0.1s ease;
         }
         .logo:hover{
-            // letter-spacing: 5px;
             margin-bottom: 15px;
+        }
+        .header_title{
+            font-size: 32px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: 0.1s ease;
+        }
+        .header_title:hover{
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 15px;
+
+        }
+        #header_language{
+            border: none;
+            outline: none;
+            font-size: 28px;
+            font-weight: 500;
+            color: #6D87E2;
         }
     }
     .inputContainer{

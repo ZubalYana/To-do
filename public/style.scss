@@ -119,6 +119,9 @@
             color: #fff;
             cursor: pointer;
             transition: 0.6s ease;
+            .addNewTask_Plus{
+                user-select: none;
+            }
         }
         .task{
             width: 350px;

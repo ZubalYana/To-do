@@ -121,6 +121,11 @@
   cursor: pointer;
   transition: 0.6s ease;
 }
+.wrap #taskContainer .addNewTask .addNewTask_Plus {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
 .wrap #taskContainer .task {
   width: 350px;
   height: 200px;

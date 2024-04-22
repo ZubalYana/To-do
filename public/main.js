@@ -16,7 +16,11 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_titleAndActionsCon">
             <div class="task_title">${task.title}</div>
             <div class="task_actions">
-            <div class="task_actions_edit"><img class="task_action" src="./imgs/pen.png" alt=""></div>
+            <div class="task_actions_edit"><img class="task_editAction" src="./imgs/pen.png" alt=""></div>
+            <div class="task_actions_delete">
+            <img class="task_actions_delete_Top" src="./imgs/bin top part.png" alt="">
+            <img class="task_actions_delete_Bottom" src="./imgs/bin bottom part.png" alt="">
+            </div>
             </div>
             </div>
             <div class="task_description">${task.description}</div>

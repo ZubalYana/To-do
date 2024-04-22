@@ -157,9 +157,23 @@
   font-size: 24px;
   font-weight: 500;
 }
-.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_action {
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_editAction {
   width: 25px;
   height: 23px;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_delete {
+  width: 19px;
+  height: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_delete .task_actions_delete_Top {
+  width: 100%;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_delete .task_actions_delete_Bottom {
+  width: 100%;
 }
 .wrap #taskContainer .task .task_description {
   font-size: 16px;

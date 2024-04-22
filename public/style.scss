@@ -147,9 +147,23 @@
                     font-weight: 500;
                 }
                 .task_actions{
-                    .task_action{
+                    .task_editAction{
                         width: 25px;
                         height: 23px;
+                    }
+                    .task_actions_delete{
+                        width: 19px;
+                        height: 23px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        .task_actions_delete_Top{
+                            width: 100%;
+                        }
+                        .task_actions_delete_Bottom{
+                            width: 100%;
+                        }
                     }
                 }
             }

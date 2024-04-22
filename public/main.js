@@ -3,11 +3,19 @@ axios.get('http://localhost:3000/tasks')
     console.log(res.data);
     const tasks = res.data;
     for(let task of tasks){
+        let time = new Date(task.createdTime); 
+        let day = time.getDate(); 
+        let month = time.getMonth() + 1; 
+        let year = time.getFullYear(); 
+        let hours = time.getHours(); 
+        let minutes = time.getMinutes();
+        let seconds = time.getSeconds();
+        let createdTime = `${day}.${month}.${year} at ${hours}:${minutes}:${seconds}`
         $('#taskContainer').append(
             `<div class="task">
             <div class="task_title">${task.title}</div>
             <div class="task_description">${task.description}</div>
-            <div class="task_neededTime">Created time: <div class="task_time">${task.createdTime}</div></div>
+            <div class="task_neededTime">Created time: <div class="task_time">${createdTime}</div></div>
             <div class="task_neededTime">Deadline: <div class="task_time">${task.deadline}</div></div>
         </div>`
         )

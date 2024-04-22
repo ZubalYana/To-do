@@ -101,6 +101,7 @@
   width: 100%;
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-between;
   margin-top: 30px;
   height: 530px;
   background-color: #fff;
@@ -109,8 +110,8 @@
   padding: 30px;
 }
 .wrap #taskContainer .addNewTask {
-  width: 360px;
-  height: 176px;
+  width: 300px;
+  height: 200px;
   background-color: #6D87E2;
   border-radius: 20px;
   display: flex;
@@ -127,16 +128,17 @@
           user-select: none;
 }
 .wrap #taskContainer .task {
-  width: 350px;
+  width: 300px;
   height: 200px;
-  border-radius: 15px;
+  background-color: #6D87E2;
+  border-radius: 20px;
   padding: 20px;
-  border: 2px #333 solid;
-  margin-right: 30px;
-  margin-bottom: 20px;
-  display: none;
+  margin: 0 20px 20px 0px;
+  cursor: pointer;
+  padding: 15px;
+  color: #fff;
 }
 .wrap #taskContainer .task .task_title {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

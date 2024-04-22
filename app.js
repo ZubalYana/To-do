@@ -20,16 +20,13 @@ const Task = mongoose.model('Task',{
 app.post('/add-task', async (req, res) => {
     try {
         const { title, description, deadline, createdTime } = req.body;
-
         const task = new Task({
             title,
             description,
             deadline,
             createdTime
         });
-
         await task.save();
-
         res.status(201).json(task);
     } catch (err) {
         res.status(500).json({ message: err.message });

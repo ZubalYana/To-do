@@ -142,6 +142,21 @@
   font-size: 24px;
   font-weight: 500;
 }
+.wrap #taskContainer .task .task_description {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 7px 0 10px 0;
+}
+.wrap #taskContainer .task .task_neededTime {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.wrap #taskContainer .task .task_neededTime .task_time {
+  font-weight: 700;
+  margin-left: 5px;
+}
 
 .addNewTaskPopup_container {
   width: 100%;

@@ -141,4 +141,72 @@
 .wrap #taskContainer .task .task_title {
   font-size: 24px;
   font-weight: 500;
+}
+
+.addNewTaskPopup_container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3607843137);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.addNewTaskPopup_container .addNewTaskPopup {
+  width: 600px;
+  height: 370px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+}
+.addNewTaskPopup_container .addNewTaskPopup h1 {
+  font-size: 40px;
+  color: #6D87E2;
+  font-weight: 600;
+}
+.addNewTaskPopup_container .addNewTaskPopup i {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+.addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon input {
+  width: 80%;
+  height: 45px;
+  border-radius: 20px;
+  border: #333 1px solid;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon #addTask {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  color: #6D87E2;
+  border: 1px #6D87E2 solid;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #fff;
+  margin-top: 7px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon #addTask:hover {
+  background-color: #6D87E2;
+  color: #fff;
+  border: 1px #fff solid;
 }/*# sourceMappingURL=style.css.map */

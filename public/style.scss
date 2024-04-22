@@ -141,3 +141,70 @@
         }
     }
 }
+.addNewTaskPopup_container{
+    width: 100%;
+    height: 100vh;
+    background-color: #0000005c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    .addNewTaskPopup{
+        width: 600px;
+        height: 370px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        position: relative;
+        h1{
+            font-size: 40px;
+            color: #6D87E2;
+            font-weight: 600;
+        }
+        i{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+        .addNewTaskPopup_inputsCon{
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            input{
+                width: 80%;
+                height: 45px;
+                border-radius: 20px;
+                border: #333 1px solid;
+                outline: none;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 15px;
+            }
+            #addTask{
+                width: 200px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                color: #6D87E2;
+                border: 1px #6D87E2 solid;
+                font-size: 24px;
+                font-weight: 500;
+                background-color: #fff;
+                margin-top: 7px;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            #addTask:hover{
+                background-color: #6D87E2;
+                color: #fff;
+                border: 1px #fff solid;
+            }
+        }
+    }
+}

@@ -12,6 +12,15 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.js' integrity='sha512-pmaEGtUAy7E5gRmwjLqQAD/QWw0dL4Z59b6b+2HQkqQwQ+HcPLLb9/KbUNo5zr10WuXmbivK9nYVZOyDkMgZMg==' crossorigin='anonymous'></script>
 </head>
 <body>
+    <div class="addNewTaskPopup_container">
+        <div class="addNewTaskPopup">
+            <h1>Add new task</h1>
+            <input type="text" id="task" placeholder="Name">
+            <input type="text" id="task_description" placeholder="Description">
+            <input type="datetime" id="task_deadline" placeholder="Deadline">
+            <button id="addTask">Add</button>
+        </div>
+    </div>
     <div class="wrap">
         <div class="header">
             <div class="logo">JustDo</div>
@@ -30,9 +39,6 @@
 
         <div id="taskContainer">
             <div class="addNewTask"><div class="addNewTask_Plus">+</div></div>
-            <!-- <div class="inputContainer">
-            <input type="text" id="task" placeholder="Name">
-            <button id="addTask">Add</button> -->
         </div>
         </div> 
     </div>

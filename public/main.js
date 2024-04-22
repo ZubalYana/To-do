@@ -6,6 +6,9 @@ axios.get('http://localhost:3000/tasks')
         $('#taskContainer').append(
             `<div class="task">
             <div class="task_title">${task.title}</div>
+            <div class="task_title">${task.description}</div>
+            <div class="task_title">${task.createdTime}</div>
+            <div class="task_title">${task.deadline}</div>
         </div>`
         )
     }
@@ -14,7 +17,10 @@ axios.get('http://localhost:3000/tasks')
 
 $('#addTask').click(()=>{
     let data = {
-        title: $('#task').val()
+        title: $('#task').val(),
+        description: $('#task_description').val(),
+        deadline: $('#task_deadline').val(),
+        createdTime: Date.now()
     }
     axios.post('http://localhost:3000/add-task', data)
     .then(res=>{

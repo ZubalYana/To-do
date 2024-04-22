@@ -12,19 +12,30 @@ mongoose.connect(`mongodb+srv://root:CdLeejqYl0BDpKLE@cluster0.raizszz.mongodb.n
 })
 
 const Task = mongoose.model('Task',{
-    title: String
+    title: String, 
+    description: String,
+    deadline: String,
+    createdTime: Number,
 })
-app.post('/add-task', async (req, res)=>{
-    try{
-        const {title} = req.body;
-        const task = new Task({title});
-        await task.save();
-        res.status(201).json(task);
-    }catch(err){
-        res.status(500).json({message: err});
-    }
+app.post('/add-task', async (req, res) => {
+    try {
+        const { title, description, deadline, createdTime } = req.body;
 
-})
+        const task = new Task({
+            title,
+            description,
+            deadline,
+            createdTime
+        });
+
+        await task.save();
+
+        res.status(201).json(task);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 app.get('/tasks', async (req,res)=>{
     try{
         const tasks = await Task.find();
@@ -33,10 +44,10 @@ app.get('/tasks', async (req,res)=>{
         res.status(500).json({message: err});
     }
 })
+
 app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
-
 app.listen(PORT, ()=>{
     console.log(`Server work on PORT: ${PORT}`)
 });

@@ -22,7 +22,6 @@ $('#addTask').click(()=>{
         location.href = '/';
     })
 })
-
 $('.addNewTask').hover(
     () => {
         $('.addNewTask_Plus').css('transform', 'rotate(360deg)');
@@ -31,3 +30,9 @@ $('.addNewTask').hover(
         $('.addNewTask_Plus').css('transform', 'rotate(0deg)');
     }
 );
+$('.addNewTask').click(()=>{
+    $('.addNewTaskPopup_container').css('display', 'flex')
+})
+$('#addTaskPopupXmark').click(()=>{
+    $('.addNewTaskPopup_container').css('display', 'none')
+})

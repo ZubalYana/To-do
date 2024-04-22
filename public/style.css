@@ -138,7 +138,12 @@
   padding: 15px;
   color: #fff;
 }
-.wrap #taskContainer .task .task_title {
+.wrap #taskContainer .task .task_titleAndActionsCon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_title {
   font-size: 24px;
   font-weight: 500;
 }

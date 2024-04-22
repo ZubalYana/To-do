@@ -134,9 +134,14 @@
             cursor: pointer;
             padding: 15px;
             color: #fff;
-            .task_title{
-                font-size: 24px;
-                font-weight: 500;
+            .task_titleAndActionsCon{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .task_title{
+                    font-size: 24px;
+                    font-weight: 500;
+                }
             }
             .task_description{
                 font-size: 16px;

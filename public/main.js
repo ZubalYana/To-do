@@ -13,7 +13,10 @@ axios.get('http://localhost:3000/tasks')
         let createdTime = `${day}.${month}.${year} at ${hours}:${minutes}:${seconds}`
         $('#taskContainer').append(
             `<div class="task">
+            <div class="task_titleAndActionsCon">
             <div class="task_title">${task.title}</div>
+            <div class="task_actions"></div>
+            </div>
             <div class="task_description">${task.description}</div>
             <div class="task_neededTime">Created time: <div class="task_time">${createdTime}</div></div>
             <div class="task_neededTime">Deadline: <div class="task_time">${task.deadline}</div></div>

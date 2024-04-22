@@ -147,6 +147,9 @@
                     font-weight: 500;
                 }
                 .task_actions{
+                    width: 60px;
+                    display: flex;
+                    justify-content: space-between;
                     .task_editAction{
                         width: 25px;
                         height: 23px;

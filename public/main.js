@@ -47,11 +47,16 @@ axios.get('http://localhost:3000/tasks')
     $('.task_actions_delete').hover(
         function () {
             // $(this).siblings('.task_actions_delete_Top').css('margin-bottom', '10px');
-            $('.task_actions_delete_Top').css('margin-bottom', '10px')
+            $('.task_actions_delete_Top').css('top', '-5px')
+            $('.task_actions_delete_Top').css('left', '-2px')
+            $('.task_actions_delete_Top').css('transform', 'rotate(-20deg)')
+
         },
         function () {
             // $(this).siblings('.task_actions_delete_Top').css('margin-bottom', '0px');
-            $('.task_actions_delete_Top').css('margin-bottom', '0px')
+            $('.task_actions_delete_Top').css('top', '0px')
+            $('.task_actions_delete_Top').css('left', '0px')
+            $('.task_actions_delete_Top').css('transform', 'rotate(0deg)')
         }
     );
     

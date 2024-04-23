@@ -197,6 +197,7 @@
   width: 19px;
   position: absolute;
   top: 0;
+  transition: 0.5s ease;
 }
 .wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_delete .task_actions_delete_Bottom {
   width: 19px;

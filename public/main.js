@@ -18,7 +18,8 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_actions">
             <div class="task_actions_edit">
             <img class="task_editAction" src="./imgs/pen.png" alt="">
-            <img class="task_actions_edit_decoration" src="./imgs/edit decoration.png">
+            <img class="task_actions_edit_decoration" id="task_actions_edit_decoration1" src="./imgs/edit decoration.png">
+            <img class="task_actions_edit_decoration" id="task_actions_edit_decoration2" src="./imgs/edit decoration.png">
             </div>
             <div class="task_actions_delete">
             <img class="task_actions_delete_Top" src="./imgs/bin top part.png" alt="">
@@ -33,16 +34,14 @@ axios.get('http://localhost:3000/tasks')
         )
 
     }
-    $('.task_actions_edit').hover(
+    $('.task_editAction').hover(
         function () {
             $(this).css('transform', 'rotate(-20deg)')
-            $(this).css('transform', 'rotate(0deg)')
-            $(this).css('transform', 'rotate(-20deg)')
-            $(this).css('transform', 'rotate(0deg)')
-            $(this).css('transform', 'rotate(-20deg)')
+            $(this).siblings('.task_actions_edit_decoration').css('display', 'flex')
         },
         function () {
             $(this).css('transform', 'rotate(0deg)')
+            $(this).siblings('.task_actions_edit_decoration').css('display', 'none')
         }
     );
 

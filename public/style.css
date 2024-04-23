@@ -163,16 +163,30 @@
   justify-content: space-between;
 }
 .wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit {
+  position: relative;
   transition: 0.5s ease;
 }
 .wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit .task_editAction {
   width: 25px;
   height: 23px;
+  transition: 0.5s ease;
 }
 .wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit .task_actions_edit_decoration {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  transition: 0.5s ease;
+  display: none;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit #task_actions_edit_decoration1 {
+  top: -2px;
+  left: -3px;
+  width: 12px;
+  height: 12px;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit #task_actions_edit_decoration2 {
+  top: 7px;
+  left: -6px;
+  width: 8px;
+  height: 8px;
 }
 .wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_delete {
   width: 19px;

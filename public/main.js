@@ -34,31 +34,26 @@ axios.get('http://localhost:3000/tasks')
         )
 
     }
-    $('.task_editAction').hover(
-        function () {
-            $(this).css('transform', 'rotate(-20deg)')
-            $(this).siblings('.task_actions_edit_decoration').css('display', 'flex')
-        },
-        function () {
-            $(this).css('transform', 'rotate(0deg)')
-            $(this).siblings('.task_actions_edit_decoration').css('display', 'none')
-        }
-    );
-    $('.task_actions_delete').hover(
-        function () {
-            // $(this).siblings('.task_actions_delete_Top').css('margin-bottom', '10px');
-            $('.task_actions_delete_Top').css('top', '-5px')
-            $('.task_actions_delete_Top').css('left', '-2px')
-            $('.task_actions_delete_Top').css('transform', 'rotate(-20deg)')
+$('.task_editAction').hover(
+    function () {
+        $(this).css('transform', 'rotate(-20deg)');
+        $(this).siblings('.task_actions_edit_decoration').css('display', 'flex');
+    },
+    function () {
+        $(this).css('transform', 'rotate(0deg)');
+        $(this).siblings('.task_actions_edit_decoration').css('display', 'none');
+    }
+);
 
-        },
-        function () {
-            // $(this).siblings('.task_actions_delete_Top').css('margin-bottom', '0px');
-            $('.task_actions_delete_Top').css('top', '0px')
-            $('.task_actions_delete_Top').css('left', '0px')
-            $('.task_actions_delete_Top').css('transform', 'rotate(0deg)')
-        }
-    );
+$('.task_actions_delete').hover(
+    function () {
+        $(this).find('.task_actions_delete_Top').addClass('delete-hover');
+    },
+    function () {
+        $(this).find('.task_actions_delete_Top').removeClass('delete-hover');
+    }
+);
+
     
 
 })

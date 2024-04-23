@@ -190,6 +190,13 @@
                             top: 0;
                             transition: 0.5s ease;
                         }
+
+                        .delete-hover {
+                            transform: rotate(-20deg);
+                            top: -5px; 
+                            left: -2px; 
+                        }
+                        
                         .task_actions_delete_Bottom{
                             width: 19px;
                             position: absolute;

@@ -44,6 +44,17 @@ axios.get('http://localhost:3000/tasks')
             $(this).siblings('.task_actions_edit_decoration').css('display', 'none')
         }
     );
+    $('.task_actions_delete').hover(
+        function () {
+            // $(this).siblings('.task_actions_delete_Top').css('margin-bottom', '10px');
+            $('.task_actions_delete_Top').css('margin-bottom', '10px')
+        },
+        function () {
+            // $(this).siblings('.task_actions_delete_Top').css('margin-bottom', '0px');
+            $('.task_actions_delete_Top').css('margin-bottom', '0px')
+        }
+    );
+    
 
 })
 

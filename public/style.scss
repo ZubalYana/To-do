@@ -182,15 +182,16 @@
                     .task_actions_delete{
                         width: 19px;
                         height: 23px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: space-between;
+                        position: relative;
                         .task_actions_delete_Top{
-                            width: 100%;
+                            width: 19px;
+                            position: absolute;
+                            top: 0;
                         }
                         .task_actions_delete_Bottom{
-                            width: 100%;
+                            width: 19px;
+                            position: absolute;
+                            bottom: 0;
                         }
                     }
                 }

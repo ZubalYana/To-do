@@ -16,7 +16,10 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_titleAndActionsCon">
             <div class="task_title">${task.title}</div>
             <div class="task_actions">
-            <div class="task_actions_edit"><img class="task_editAction" src="./imgs/pen.png" alt=""></div>
+            <div class="task_actions_edit">
+            <img class="task_editAction" src="./imgs/pen.png" alt="">
+            <img class="task_actions_edit_decoration" scr="./imgs/pen.png">
+            </div>
             <div class="task_actions_delete">
             <img class="task_actions_delete_Top" src="./imgs/bin top part.png" alt="">
             <img class="task_actions_delete_Bottom" src="./imgs/bin bottom part.png" alt="">
@@ -28,9 +31,22 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_neededTime">Deadline: <div class="task_time">${task.deadline}</div></div>
         </div>`
         )
-    }
-})
 
+    }
+    $('.task_actions_edit').hover(
+        function () {
+            $(this).css('transform', 'rotate(-20deg)')
+            $(this).css('transform', 'rotate(0deg)')
+            $(this).css('transform', 'rotate(-20deg)')
+            $(this).css('transform', 'rotate(0deg)')
+            $(this).css('transform', 'rotate(-20deg)')
+        },
+        function () {
+            $(this).css('transform', 'rotate(0deg)')
+        }
+    );
+
+})
 
 $('#addTask').click(()=>{
     let data = {
@@ -59,3 +75,4 @@ $('.addNewTask').click(()=>{
 $('#addTaskPopupXmark').click(()=>{
     $('.addNewTaskPopup_container').css('display', 'none')
 })
+

@@ -150,10 +150,14 @@
                     width: 60px;
                     display: flex;
                     justify-content: space-between;
-                    .task_editAction{
-                        width: 25px;
-                        height: 23px;
+                    .task_actions_edit{
+                        transition: 0.5s ease;
+                        .task_editAction{
+                            width: 25px;
+                            height: 23px;
+                        }
                     }
+
                     .task_actions_delete{
                         width: 19px;
                         height: 23px;

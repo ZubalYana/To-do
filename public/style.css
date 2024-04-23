@@ -162,7 +162,10 @@
   display: flex;
   justify-content: space-between;
 }
-.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_editAction {
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit {
+  transition: 0.5s ease;
+}
+.wrap #taskContainer .task .task_titleAndActionsCon .task_actions .task_actions_edit .task_editAction {
   width: 25px;
   height: 23px;
 }

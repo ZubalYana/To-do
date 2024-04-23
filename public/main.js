@@ -18,7 +18,7 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_actions">
             <div class="task_actions_edit">
             <img class="task_editAction" src="./imgs/pen.png" alt="">
-            <img class="task_actions_edit_decoration" scr="./imgs/pen.png">
+            <img class="task_actions_edit_decoration" src="./imgs/edit decoration.png">
             </div>
             <div class="task_actions_delete">
             <img class="task_actions_delete_Top" src="./imgs/bin top part.png" alt="">

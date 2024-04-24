@@ -33,6 +33,7 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_neededTime">Deadline: <div class="task_time">${task.deadline}</div></div>
         </div>`
         )
+        changeTheme(theme);
 
     }
 $('.task_editAction').hover(
@@ -109,6 +110,7 @@ function changeTheme(theme){
         $('select').css('background-color', '#fff')
         $('.task').css('color', '#fff')
         $('.addNewTask_Plus').css('color', '#fff')
+        $('.task_title').css('color', '#fff')
         $('.task_editAction').attr('src', './imgs/pen.png')
         $('.task_actions_edit_decoration').attr('src', './imgs/edit decoration.png')
         $('.task_actions_delete_Top').attr('src', './imgs/bin top part.png')
@@ -121,6 +123,7 @@ function changeTheme(theme){
         $('select').css('background-color', '#333')
         $('.task').css('color', '#333')
         $('.addNewTask_Plus').css('color', '#333')
+        $('.task_title').css('color', '#333')
         $('.task_editAction').attr('src', './imgs/dark pen.png')
         $('.task_actions_edit_decoration').attr('src', './imgs/dark edit decoration.png')
         $('.task_actions_delete_Top').attr('src', './imgs/dark bin top part.png')

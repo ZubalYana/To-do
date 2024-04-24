@@ -109,6 +109,11 @@ function changeTheme(theme){
         $('select').css('background-color', '#fff')
         $('.task').css('color', '#fff')
         $('.addNewTask_Plus').css('color', '#fff')
+        $('.task_editAction').attr('src', './imgs/pen.png')
+        $('.task_actions_edit_decoration').attr('src', './imgs/edit decoration.png')
+        $('.task_actions_delete_Top').attr('src', './imgs/bin top part.png')
+        $('.task_actions_delete_Bottom').attr('src', './imgs/bin bottom part.png')
+
     }else{
         $('.header_themeChanger').attr('src', './imgs/dark theme changer.png')
         $('.header').css('background-color', '#333')
@@ -116,8 +121,10 @@ function changeTheme(theme){
         $('select').css('background-color', '#333')
         $('.task').css('color', '#333')
         $('.addNewTask_Plus').css('color', '#333')
-
-
+        $('.task_editAction').attr('src', './imgs/dark pen.png')
+        $('.task_actions_edit_decoration').attr('src', './imgs/dark edit decoration.png')
+        $('.task_actions_delete_Top').attr('src', './imgs/dark bin top part.png')
+        $('.task_actions_delete_Bottom').attr('src', './imgs/dark bin bottom part.png')
     }
 }
 changeTheme(theme);

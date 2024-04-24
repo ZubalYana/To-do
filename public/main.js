@@ -104,8 +104,15 @@ $('.header_themeChanger').click(function(){
 function changeTheme(theme){
     if(theme == 'light'){
         $('.header_themeChanger').attr('src', './imgs/light theme changer.png')
+        $('.header').css('background-color', '#fff')
+        $('#taskContainer').css('background-color', '#fff')
+        $('select').css('background-color', '#fff')
     }else{
         $('.header_themeChanger').attr('src', './imgs/dark theme changer.png')
+        $('.header').css('background-color', '#333')
+        $('#taskContainer').css('background-color', '#333')
+        $('select').css('background-color', '#333')
+
     }
 }
 changeTheme(theme);

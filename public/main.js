@@ -107,11 +107,13 @@ function changeTheme(theme){
         $('.header').css('background-color', '#fff')
         $('#taskContainer').css('background-color', '#fff')
         $('select').css('background-color', '#fff')
+        $('.task').css('color', '#fff')
     }else{
         $('.header_themeChanger').attr('src', './imgs/dark theme changer.png')
         $('.header').css('background-color', '#333')
         $('#taskContainer').css('background-color', '#333')
         $('select').css('background-color', '#333')
+        $('.task').css('color', '#333')
 
     }
 }

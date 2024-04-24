@@ -191,8 +191,24 @@ let semanticCore = {
         "poland": "Osobisty śledzik zadań",
         "japan": "個人タスクトラッカー",
         "france": "Suivi personnel des tâches",
-    }
+    },
+    addNewTaskTitle: {
+        "en": "Add new task",
+        "ukraine": "Додати нове завдання",
+        "poland": "Dodaj nowe zadanie",
+        "japan": "新しいタスクを追加",
+        "france": "Ajouter une nouvelle tâche",
+    },
+    addTask: {
+        "en": "Add",
+        "ukraine": "Додати",
+        "poland": "Dodaj",
+        "japan": "追加",
+        "france": "Ajouter",
+    },
+    
 };
+
 
 let allLang = ['en', 'ukraine', 'poland', 'japan', 'france'];
 
@@ -244,7 +260,7 @@ $('#header_language').change(function() {
     }
 
     localStorage.setItem('lang', lang);
-    updateLanguage(); // Update displayed language immediately
+    updateLanguage(); 
 
     location.href = window.location.pathname + '#' + lang;
 });

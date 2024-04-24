@@ -115,6 +115,30 @@ function changeTheme(theme){
         $('.task_actions_edit_decoration').attr('src', './imgs/edit decoration.png')
         $('.task_actions_delete_Top').attr('src', './imgs/bin top part.png')
         $('.task_actions_delete_Bottom').attr('src', './imgs/bin bottom part.png')
+        $('.addNewTaskPopup').css('background-color', '#fff')
+        $('i').css('color', '#333')
+        $('input').css('background-color', '#fff')
+        $('input').css('border', '1px #333 solid')
+        $('#addTask').css('background-color', '#fff')
+        $('#addTask').css('border', '1px #6D87E2 solid')
+        $('#addTask').css('color', '#6D87E2')
+        $('#addTask').hover(
+            () => {
+                $('#addTask').css({
+                    'background-color': '#6D87E2',
+                    'color': '#fff',
+                    'border': '#fff 1px solid',
+                });
+            },
+            () => {
+                $('#addTask').css({
+                    'background-color': '#fff',
+                    'color': '#6D87E2',
+                    'border': '#6D87E2 1px solid',
+
+                });
+            }
+        );
 
     }else{
         $('.header_themeChanger').attr('src', './imgs/dark theme changer.png')
@@ -128,6 +152,32 @@ function changeTheme(theme){
         $('.task_actions_edit_decoration').attr('src', './imgs/dark edit decoration.png')
         $('.task_actions_delete_Top').attr('src', './imgs/dark bin top part.png')
         $('.task_actions_delete_Bottom').attr('src', './imgs/dark bin bottom part.png')
+        $('.addNewTaskPopup').css('background-color', '#333')
+        $('i').css('color', '#fff')
+        $('input').css('background-color', '#333')
+        $('input').css('border', '1px #fff solid')
+        $('#addTask').css('background-color', '#333')
+        $('#addTask').css('border', '1px #6D87E2 solid')
+        $('#addTask').css('color', '#6D87E2')
+
+
+        $('#addTask').hover(
+            () => {
+                $('#addTask').css({
+                    'background-color': '#6D87E2',
+                    'color': '#333',
+                    'border': '#333 1px solid',
+                });
+            },
+            () => {
+                $('#addTask').css({
+                    'background-color': '#333',
+                    'color': '#6D87E2',
+                    'border': '#6D87E2 1px solid',
+
+                });
+            }
+        );
     }
 }
 changeTheme(theme);

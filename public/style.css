@@ -287,9 +287,4 @@
   margin-top: 7px;
   cursor: pointer;
   transition: 0.3s ease;
-}
-.addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon #addTask:hover {
-  background-color: #6D87E2;
-  color: #fff;
-  border: 1px #fff solid;
 }/*# sourceMappingURL=style.css.map */

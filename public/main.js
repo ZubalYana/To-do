@@ -1,3 +1,4 @@
+//tasks adding
 axios.get('http://localhost:3000/tasks')
 .then((res)=>{
     console.log(res.data);
@@ -57,7 +58,6 @@ $('.task_actions_delete').hover(
     
 
 })
-
 $('#addTask').click(()=>{
     let data = {
         title: $('#task').val(),
@@ -86,3 +86,26 @@ $('#addTaskPopupXmark').click(()=>{
     $('.addNewTaskPopup_container').css('display', 'none')
 })
 
+
+//theme changing
+let theme = localStorage.getItem('theme') || 'light';
+$('.header_themeChanger').click(function(){
+    if(theme == 'light'){
+        theme = 'dark';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+
+    }else{
+        theme = 'light';
+        localStorage.setItem('theme', theme);
+        changeTheme(theme);
+    }
+})
+function changeTheme(theme){
+    if(theme == 'light'){
+        $('.header_themeChanger').attr('src', './imgs/light theme changer.png')
+    }else{
+        $('.header_themeChanger').attr('src', './imgs/dark theme changer.png')
+    }
+}
+changeTheme(theme);

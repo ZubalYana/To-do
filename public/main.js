@@ -184,80 +184,73 @@ changeTheme(theme);
 
 
 //language changing
-let semanticCore ={
+let semanticCore = {
     header_title: {
         "en": "Personal Task Tracker",
         "ukraine": "Персональний трекер завдань",
-        "poland": "",
-        "japan": "",
-        "france": "",
+        "poland": "Osobisty śledzik zadań",
+        "japan": "個人タスクトラッカー",
+        "france": "Suivi personnel des tâches",
+    }
+};
+
+let allLang = ['en', 'ukraine', 'poland', 'japan', 'france'];
+
+let lang = localStorage.getItem('lang') || 'en';
+
+function updateLanguage() {
+    for (let key in semanticCore) {
+        document.querySelector('.language-' + key).innerText = semanticCore[key][lang];
     }
 }
 
-let allLang = ['en', 'ukraine', 'poland', 'japan', 'france'];
-let lang = 'en'
+function changeLanguage() {
+    let hash = (window.location.hash).substring(1);
 
+    if (!allLang.includes(hash)) {
+        hash = 'en';
+        location.href = window.location.pathname + '#en';
+    }
+
+    lang = hash;
+    localStorage.setItem('lang', lang); 
+
+    updateLanguage();
+
+    $('#header_language').val(lang);
+}
 
 $('#header_language').change(function() {
-    // This function will execute whenever an option is clicked or selected
-
-    // Get the selected option value
     let selectedValue = $(this).val();
+    $('#header_language').val(lang);
+    switch (selectedValue) {
+        case 'en':
+            lang = 'en';
+            break;
+        case 'Ukr':
+            lang = 'ukraine';
+            break;
+        case 'Jap':
+            lang = 'japan';
+            break;
+        case 'Fr':
+            lang = 'france';
+            break;
+        case 'Pol':
+            lang = 'poland';
+            break;
+        default:
+            lang = 'en'; 
+    }
 
-    // Get the selected option text
-    let selectedText = $(this).find('option:selected').text();
+    localStorage.setItem('lang', lang);
+    updateLanguage(); // Update displayed language immediately
 
-    // Display the selected option value and text (you can modify this as needed)
-    console.log("Selected Option Value: " + selectedValue);
-    console.log("Selected Option Text: " + selectedText);
-
-    // You can perform further actions based on the selected option here
-    // For example, update other parts of your UI or trigger additional functions
+    location.href = window.location.pathname + '#' + lang;
 });
 
 
-// ukraine.onclick = function(){
-//     lang = 'ukraine'
-//     console.log(lang)
-//     changeUrl()
-// }
-// en.onclick = function(){
-//     lang = 'en'
-//     console.log(lang)
-//     changeUrl()
-// }
-// poland.onclick = function(){
-//     lang = 'poland'
-//     console.log(lang)
-//     changeUrl()
-// }
-// japan.onclick = function(){
-//     lang = 'japan'
-//     console.log(lang)
-//     changeUrl()
-// }
-// france.onclick = function(){
-//     lang = 'france'
-//     console.log(lang)
-//     changeUrl()
-// }
+changeLanguage();
 
-function changeUrl(){
-    location.href = window.location.pathname + '#' + lang;
-    location.reload();
-}
+window.onhashchange = changeLanguage;
 
-function changeLanguage(){
-    let hash = (window.location.hash).substring(1)
-    console.log(hash)
-    if(!allLang.includes(hash)){
-        location.href = window.location.pathname + '#en'
-        location.reload();
-    }
-
-    for(let key in semanticCore){
-        document.querySelector('.language-' + key).innerText = semanticCore[key][hash]
-    }
-}
-
-changeLanguage()

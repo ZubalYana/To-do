@@ -335,6 +335,36 @@
     }
     .cookiePopup_picContainer{
         width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cookiePopup_picContainer_cookie{
+            position: relative;
+            width: 250px;
+            height: 250px;
+            .cookiePart{
+                position: absolute;
+            }
+            .cookie{
+                width: 250px;
+            }
+            .cookieCrumb1{
+                width: 43px;
+                left: 165px;
+                top: 2px;
+            }
+            .cookieCrumb2{
+                width: 46px;
+                left: 192px;
+                top: 50px;
+            }
+            .cookieCrumb3{
+                width: 33px;
+                left: 220px;
+                top: 5px;
+            }
+        }
     }
 
 }

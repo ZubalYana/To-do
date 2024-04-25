@@ -287,4 +287,23 @@
   margin-top: 7px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.cookiesPopupContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3607843137);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 9999;
+}
+.cookiesPopupContainer .cookiePopup {
+  width: 600px;
+  height: 370px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

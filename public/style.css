@@ -306,6 +306,7 @@
   padding: 30px;
   border-radius: 20px;
   position: relative;
+  display: flex;
 }
 .cookiesPopupContainer .cookiePopup_textCon {
   color: #6D87E2;
@@ -335,4 +336,7 @@
   margin-top: 20px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+.cookiesPopupContainer .cookiePopup_picContainer {
+  width: 40%;
 }/*# sourceMappingURL=style.css.map */

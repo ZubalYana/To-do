@@ -319,7 +319,7 @@
 .cookiesPopupContainer .cookiePopup_textCon .cookiePopup_text {
   font-size: 20px;
   font-weight: 300;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 .cookiesPopupContainer .cookiePopup_textCon .cookiePopup_btn {
   width: 200px;
@@ -333,7 +333,7 @@
   font-size: 24px;
   font-weight: 500;
   background-color: #fff;
-  margin-top: 20px;
+  margin-top: 25px;
   cursor: pointer;
   transition: 0.3s ease;
 }

@@ -309,7 +309,7 @@ function closePopup() {
 }
 
 
-//cookies animation
+//cookies animation & the button hover
 $('.cookiePopup_picContainer_cookie').hover(
     () => {
         $('.cookieCrumb1').css({
@@ -357,6 +357,23 @@ $('.cookiePopup_picContainer_cookie').hover(
         $('.cookie').css({
             'width': '250px',
             'transform': 'rotate(0deg)'  
+        });
+    }
+);
+$('.cookiePopup_btn').hover(
+    () => {
+        $('.cookiePopup_btn').css({
+            'background-color': '#6D87E2',
+            'color': '#fff',
+            'border': '#fff 1px solid',
+        });
+    },
+    () => {
+        $('.cookiePopup_btn').css({
+            'background-color': '#fff',
+            'color': '#6D87E2',
+            'border': '#6D87E2 1px solid',
+
         });
     }
 );

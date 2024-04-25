@@ -313,63 +313,53 @@ function closePopup() {
 }
 
 
-// $('.cookiesPopup_PicPart').hover(
-//     () => {
-//         $('#cookie-crumb-1').css({
-//             'width': '80px',
-//             'top': '40px',
-//             'right': '150px',
-//             'transform': 'rotate(90deg)'
-//         });
-//         $('#cookie-crumb-2').css({
-//             'width': '60px', 
-//             'top': '90px',   
-//             'right': '70px',
-//             'transform': 'rotate(-120deg)'
-//         });
-//         $('#cookie-crumb-3').css({
-//             'width': '50px', 
-//             'top': '120px',   
-//             'right': '160px',
-//             'transform': 'rotate(144deg)'  
-//         });
-//         $('#cookie-crumb-4').css({
-//             'width': '50px', 
-//             'top': '150px',   
-//             'right': '100px',
-//             'transform': 'rotate(-184deg)'  
-//         });
-//         $('#cookieWithoutCrumbs').css({
-//             'transform': 'rotate(-20deg)'  
-//         });
-//     },
-//     () => {
-//         $('#cookie-crumb-1').css({
-//             'width': '70px', 
-//             'top': '100px',   
-//             'right': '110px',
-//             'transform': 'rotate(0deg)'
-//         });
-//         $('#cookie-crumb-2').css({
-//             'width': '50px', 
-//             'top': '155px',   
-//             'right': '90px',
-//             'transform': 'rotate(0deg)'
-//         });
-//         $('#cookie-crumb-3').css({
-//             'width': '40px', 
-//             'top': '175px',   
-//             'right': '135px',
-//             'transform': 'rotate(0deg)'
-//         });
-//         $('#cookie-crumb-4').css({
-//             'width': '40px', 
-//             'top': '210px',   
-//             'right': '110px',
-//             'transform': 'rotate(0deg)'
-//         });
-//         $('#cookieWithoutCrumbs').css({
-//             'transform': 'rotate(0deg)'  
-//         });
-//     }
-// );
+$('.cookiePopup_picContainer_cookie').hover(
+    () => {
+        $('.cookieCrumb1').css({
+            'width': '50px',
+            'top': '-30px',
+            'left': '110px',
+            'transform': 'rotate(120deg)'
+        });
+        $('.cookieCrumb2').css({
+            'width': '53px',
+            'top': '14px',
+            'left': '168px',
+            'transform': 'rotate(90deg)'
+        });
+        $('.cookieCrumb3').css({
+            'width': '40px',
+            'top': '-38px',
+            'left': '180px',
+            'transform': 'rotate(90deg)'
+        });
+        $('.cookie').css({
+            'width': '260px',
+            'transform': 'rotate(-20deg)'  
+        });
+    },
+    () => {
+        $('.cookieCrumb1').css({
+            'width': '43px',
+            'top': '2px',
+            'left': '165px',
+            'transform': 'rotate(0deg)'
+        });
+        $('.cookieCrumb2').css({
+            'width': '46px',
+            'top': '50px',
+            'left': '192px',
+            'transform': 'rotate(0deg)'
+        });
+        $('.cookieCrumb3').css({
+            'width': '33px',
+            'top': '5px',
+            'left': '220px',
+            'transform': 'rotate(0deg)'
+        });
+        $('.cookie').css({
+            'width': '250px',
+            'transform': 'rotate(0deg)'  
+        });
+    }
+);

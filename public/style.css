@@ -301,7 +301,7 @@
 }
 .cookiesPopupContainer .cookiePopup {
   width: 800px;
-  height: 340px;
+  height: 380px;
   background-color: #fff;
   padding: 30px;
   border-radius: 20px;
@@ -348,9 +348,11 @@
   position: relative;
   width: 250px;
   height: 250px;
+  cursor: pointer;
 }
 .cookiesPopupContainer .cookiePopup_picContainer .cookiePopup_picContainer_cookie .cookiePart {
   position: absolute;
+  transition: 0.7s ease;
 }
 .cookiesPopupContainer .cookiePopup_picContainer .cookiePopup_picContainer_cookie .cookie {
   width: 250px;

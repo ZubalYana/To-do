@@ -208,18 +208,13 @@ let semanticCore = {
     },
     
 };
-
-
 let allLang = ['en', 'ukraine', 'poland', 'japan', 'france'];
-
 let lang = localStorage.getItem('lang') || 'en';
-
 function updateLanguage() {
     for (let key in semanticCore) {
         document.querySelector('.language-' + key).innerText = semanticCore[key][lang];
     }
 }
-
 function changeLanguage() {
     let hash = (window.location.hash).substring(1);
 
@@ -235,7 +230,6 @@ function changeLanguage() {
 
     $('#header_language').val(lang);
 }
-
 $('#header_language').change(function() {
     let selectedValue = $(this).val();
     $('#header_language').val(lang);
@@ -264,9 +258,118 @@ $('#header_language').change(function() {
 
     location.href = window.location.pathname + '#' + lang;
 });
-
-
 changeLanguage();
-
 window.onhashchange = changeLanguage;
 
+
+//cookies
+$(document).ready(function() {
+    checkPopupCookie();
+    
+    $("#acceptCookiesBtn").click(function() {
+        console.log("Accept cookies button clicked.");
+        closePopup();
+    });
+});
+
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    const name = cname + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkPopupCookie() {
+    const popupClosed = getCookie("popupClosed");
+    if (popupClosed === "true") {
+        console.log("Popup cookie detected. Closing popup.");
+        $(".cookiesPopupContainer").css('display', 'none');
+    } else {
+        console.log("No popup cookie detected. Showing popup.");
+        $(".cookiesPopupContainer").css('display', 'flex'); 
+    }
+}
+
+function closePopup() {
+    console.log("Closing popup and setting cookie.");
+    $(".cookiesPopupContainer").css('display', 'none');
+    setCookie("popupClosed", "true", 365);
+}
+
+
+// $('.cookiesPopup_PicPart').hover(
+//     () => {
+//         $('#cookie-crumb-1').css({
+//             'width': '80px',
+//             'top': '40px',
+//             'right': '150px',
+//             'transform': 'rotate(90deg)'
+//         });
+//         $('#cookie-crumb-2').css({
+//             'width': '60px', 
+//             'top': '90px',   
+//             'right': '70px',
+//             'transform': 'rotate(-120deg)'
+//         });
+//         $('#cookie-crumb-3').css({
+//             'width': '50px', 
+//             'top': '120px',   
+//             'right': '160px',
+//             'transform': 'rotate(144deg)'  
+//         });
+//         $('#cookie-crumb-4').css({
+//             'width': '50px', 
+//             'top': '150px',   
+//             'right': '100px',
+//             'transform': 'rotate(-184deg)'  
+//         });
+//         $('#cookieWithoutCrumbs').css({
+//             'transform': 'rotate(-20deg)'  
+//         });
+//     },
+//     () => {
+//         $('#cookie-crumb-1').css({
+//             'width': '70px', 
+//             'top': '100px',   
+//             'right': '110px',
+//             'transform': 'rotate(0deg)'
+//         });
+//         $('#cookie-crumb-2').css({
+//             'width': '50px', 
+//             'top': '155px',   
+//             'right': '90px',
+//             'transform': 'rotate(0deg)'
+//         });
+//         $('#cookie-crumb-3').css({
+//             'width': '40px', 
+//             'top': '175px',   
+//             'right': '135px',
+//             'transform': 'rotate(0deg)'
+//         });
+//         $('#cookie-crumb-4').css({
+//             'width': '40px', 
+//             'top': '210px',   
+//             'right': '110px',
+//             'transform': 'rotate(0deg)'
+//         });
+//         $('#cookieWithoutCrumbs').css({
+//             'transform': 'rotate(0deg)'  
+//         });
+//     }
+// );

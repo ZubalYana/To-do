@@ -271,14 +271,12 @@ $(document).ready(function() {
         closePopup();
     });
 });
-
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     const expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
 function getCookie(cname) {
     const name = cname + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
@@ -294,7 +292,6 @@ function getCookie(cname) {
     }
     return "";
 }
-
 function checkPopupCookie() {
     const popupClosed = getCookie("popupClosed");
     if (popupClosed === "true") {
@@ -305,7 +302,6 @@ function checkPopupCookie() {
         $(".cookiesPopupContainer").css('display', 'flex'); 
     }
 }
-
 function closePopup() {
     console.log("Closing popup and setting cookie.");
     $(".cookiesPopupContainer").css('display', 'none');
@@ -313,6 +309,7 @@ function closePopup() {
 }
 
 
+//cookies animation
 $('.cookiePopup_picContainer_cookie').hover(
     () => {
         $('.cookieCrumb1').css({

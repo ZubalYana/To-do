@@ -26,4 +26,23 @@
   .addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon input {
     width: 100%;
   }
+  .cookiesPopupContainer .cookiePopup {
+    width: 85%;
+    flex-direction: column;
+    height: 600px;
+  }
+  .cookiesPopupContainer .cookiePopup .cookiePopup_textCon {
+    width: 100%;
+  }
+  .cookiesPopupContainer .cookiePopup .cookiePopup_textCon .cookiePopup_title {
+    font-size: 24px;
+  }
+  .cookiesPopupContainer .cookiePopup .cookiePopup_textCon .cookiePopup_text {
+    font-size: 16px;
+  }
+  .cookiesPopupContainer .cookiePopup .cookiePopup_picContainer {
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=adaptability.css.map */

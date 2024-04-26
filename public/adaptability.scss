@@ -35,4 +35,26 @@
 
         }
     }
+    .cookiesPopupContainer{
+        .cookiePopup{
+            width: 85%;
+            flex-direction: column;
+            height: 600px;
+            .cookiePopup_textCon{
+                width: 100%;
+                .cookiePopup_title{
+                    font-size: 24px;
+                }
+                .cookiePopup_text{
+                    font-size: 16px;
+                }
+            }
+            .cookiePopup_picContainer{
+                width: 100%;
+                padding-top: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+
 }

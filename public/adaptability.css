@@ -5,4 +5,15 @@
   .wrap .header .header_title {
     display: none;
   }
+  .wrap #taskContainer {
+    min-height: 600px;
+  }
+  .wrap #taskContainer .addNewTask {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .wrap #taskContainer .task {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
 }/*# sourceMappingURL=adaptability.css.map */

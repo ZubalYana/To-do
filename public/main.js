@@ -122,6 +122,7 @@ function changeTheme(theme){
         $('#addTask').css('background-color', '#fff')
         $('#addTask').css('border', '1px #6D87E2 solid')
         $('#addTask').css('color', '#6D87E2')
+        $('.addNewTask_Plus').css('color', '#fff')
         $('#addTask').hover(
             () => {
                 $('#addTask').css({
@@ -159,6 +160,7 @@ function changeTheme(theme){
         $('#addTask').css('background-color', '#333')
         $('#addTask').css('border', '1px #6D87E2 solid')
         $('#addTask').css('color', '#6D87E2')
+        $('.addNewTask_Plus').css('color', '#333')
 
 
         $('#addTask').hover(

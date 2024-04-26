@@ -1,2 +1,10 @@
 @media screen and (max-device-width: 430px) {
+    .wrap{
+        padding: 15px;
+        .header{
+            .header_title{
+                display: none;
+            }
+        }
+    }
 }

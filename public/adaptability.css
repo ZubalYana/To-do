@@ -1,1 +1,8 @@
-/*# sourceMappingURL=adaptability.css.map */
+@media screen and (max-device-width: 430px) {
+  .wrap {
+    padding: 15px;
+  }
+  .wrap .header .header_title {
+    display: none;
+  }
+}/*# sourceMappingURL=adaptability.css.map */

@@ -16,4 +16,14 @@
     width: 100%;
     margin: 0 0 20px 0;
   }
+  .addNewTaskPopup_container .addNewTaskPopup {
+    width: 85%;
+    height: 350px;
+  }
+  .addNewTaskPopup_container .addNewTaskPopup h1 {
+    font-size: 28px;
+  }
+  .addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon input {
+    width: 100%;
+  }
 }/*# sourceMappingURL=adaptability.css.map */

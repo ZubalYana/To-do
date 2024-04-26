@@ -20,4 +20,19 @@
         }
 
     }
+    .addNewTaskPopup_container{
+        .addNewTaskPopup{
+            width: 85%;
+            height: 350px;
+            h1{
+                font-size: 28px;
+            }
+            .addNewTaskPopup_inputsCon{
+                input{
+                    width: 100%;
+                }
+            }
+
+        }
+    }
 }

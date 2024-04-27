@@ -42,6 +42,19 @@ app.get('/tasks', async (req,res)=>{
     }
 })
 
+app.delete('/task/:id', async ( req, res )=>{
+    try {
+        const id = req.params.id;
+        console.log(id);
+        await Task.findByIdAndDelete(id);
+        res.status(204).end();
+    }
+    catch (err) {
+        res.status(500).json({ message: err })
+    }
+})
+
+
 app.get('/', (req, res)=>{
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })

@@ -22,7 +22,7 @@ axios.get('http://localhost:3000/tasks')
             <img class="task_actions_edit_decoration" id="task_actions_edit_decoration1" src="./imgs/edit decoration.png">
             <img class="task_actions_edit_decoration" id="task_actions_edit_decoration2" src="./imgs/edit decoration.png">
             </div>
-            <div class="task_actions_delete">
+            <div class="task_actions_delete" id='${task._id}'>
             <img class="task_actions_delete_Top" src="./imgs/bin top part.png" alt="">
             <img class="task_actions_delete_Bottom" src="./imgs/bin bottom part.png" alt="">
             </div>
@@ -46,7 +46,6 @@ $('.task_editAction').hover(
         $(this).siblings('.task_actions_edit_decoration').css('display', 'none');
     }
 );
-
 $('.task_actions_delete').hover(
     function () {
         $(this).find('.task_actions_delete_Top').addClass('delete-hover');
@@ -57,7 +56,16 @@ $('.task_actions_delete').hover(
 );
 
     
+$('.task_actions_delete').click((e)=>{
+    console.log(e.target)
+    let id = e.target.id;
+    console.log(id)
+    axios.delete(`http://localhost:3000/task/${id}`)
+    .then(res => {
+        location.reload()
 
+    })
+})
 })
 $('#addTask').click(()=>{
     let data = {

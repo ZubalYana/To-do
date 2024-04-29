@@ -1,4 +1,4 @@
-//tasks adding
+//tasks functionality ( adding, deleting, editing )
 axios.get('http://localhost:3000/tasks')
 .then((res)=>{
     console.log(res.data);
@@ -17,7 +17,7 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_titleAndActionsCon">
             <div class="task_title">${task.title}</div>
             <div class="task_actions">
-            <div class="task_actions_edit">
+            <div class="task_actions_edit" id='edit${task._id}'>
             <img class="task_editAction" src="./imgs/pen.png" alt="">
             <img class="task_actions_edit_decoration" id="task_actions_edit_decoration1" src="./imgs/edit decoration.png">
             <img class="task_actions_edit_decoration" id="task_actions_edit_decoration2" src="./imgs/edit decoration.png">
@@ -53,9 +53,7 @@ $('.task_actions_delete').hover(
     function () {
         $(this).find('.task_actions_delete_Top').removeClass('delete-hover');
     }
-);
-
-    
+);  
 $('.task_actions_delete').click((e)=>{
     console.log(e.target)
     let id = e.target.id;
@@ -66,7 +64,24 @@ $('.task_actions_delete').click((e)=>{
 
     })
 })
+$('.task_actions_edit').click(e => {
+    alert('dsgdsf')
+    let ID = e.target.id;
+    if (ID.substring(0, 4) == 'edit') {
+        ID = ID.substring(4);
+        console.log(ID);
+        let data = {
+            title: prompt('Введи нове завдання')
+        };
+        axios.put(`http://localhost:3000/edit-task/${ID}`, data)
+            .then(res => {
+                alert('Дані оновлено');
+            })
+    }
+});
 })
+
+
 $('#addTask').click(()=>{
     let data = {
         title: $('#task').val(),

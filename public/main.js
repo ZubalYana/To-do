@@ -65,7 +65,6 @@ $('.task_actions_delete').click((e)=>{
     })
 })
 $('.task_actions_edit').click(e => {
-    alert('dsgdsf')
     let ID = e.target.id;
     if (ID.substring(0, 4) == 'edit') {
         ID = ID.substring(4);

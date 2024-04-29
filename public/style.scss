@@ -348,6 +348,11 @@
                 cursor: pointer;
                 transition: 0.3s ease;
             }
+            #saveChanges:hover{
+                color: #fff;
+                border: 1px #6D87E2 solid;
+                background-color: #6D87E2;
+            }
         // }
     }
 }

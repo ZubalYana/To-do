@@ -94,6 +94,9 @@ $('.addNewTask').click(()=>{
 $('#addTaskPopupXmark').click(()=>{
     $('.addNewTaskPopup_container').css('display', 'none')
 })
+$('#editTaskPopupXmark').click(()=>{
+    $('.editTaskPopup_container').css('display', 'none')
+})
 
 
 //theme changing

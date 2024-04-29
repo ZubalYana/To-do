@@ -32,7 +32,6 @@ app.post('/add-task', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
-
 app.get('/tasks', async (req,res)=>{
     try{
         const tasks = await Task.find();
@@ -41,7 +40,6 @@ app.get('/tasks', async (req,res)=>{
         res.status(500).json({message: err});
     }
 })
-
 app.delete('/task/:id', async ( req, res )=>{
     try {
         const id = req.params.id;

@@ -78,6 +78,45 @@ $('.task_actions_edit').click(e => {
             })
     }
 });
+
+
+
+
+
+
+
+
+
+
+// let ID; // Declare ID variable outside the click event handler
+
+// $('.task_actions_edit').click(e => {
+//     $('.editTaskPopup_container').css('display', 'flex');
+//     ID = e.target.id; // Assign value to ID here
+//     if (ID.substring(0, 4) == 'edit') {
+//         ID = ID.substring(4);
+//         console.log(ID);
+//         // Your code to show the popup and retrieve task data
+//     }
+// });
+
+// $('#saveChanges').click(() => {
+//     let data = {
+//         title: $('#newTaskTitle').val()
+//     };
+//     axios.put(`http://localhost:3000/edit-task/${ID}`, data)
+//         .then(res => {
+//             alert('Дані оновлено');
+//             $('.editTaskPopup_container').css('display', 'none');
+//         })
+//         .catch(err => {
+//             alert('Error updating data');
+//             console.error(err);
+//         });
+// });
+
+
+
 })
 
 

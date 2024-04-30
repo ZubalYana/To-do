@@ -65,23 +65,6 @@ $('.task_actions_delete_Bottom').click((e)=>{
     })
 })
 
-// $('.task_editAction').click(e => {
-//     let ID = e.target.id;
-//     if (ID.substring(0, 4) == 'edit') {
-//         ID = ID.substring(4);
-//         console.log(ID);
-//         let data = {
-//             title: prompt('Введи нове завдання')
-//         };
-//         axios.put(`http://localhost:3000/edit-task/${ID}`, data)
-//             .then(res => {
-//                 alert('Дані оновлено');
-//             })
-//     }
-// });
-
-
-
 $('.task_editAction').click(e => {
     let ID = e.target.id;
     $('.editTaskPopup_container').css('display', 'flex')
@@ -89,6 +72,7 @@ $('.task_editAction').click(e => {
     if (ID.substring(0, 4) == 'edit') {
         ID = ID.substring(4);
         console.log(ID);
+
         $('#saveChanges').click(()=>{
             let data = {
                 title: $('#newTaskTitle').val(),

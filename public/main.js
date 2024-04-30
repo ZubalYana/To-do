@@ -158,6 +158,7 @@ function changeTheme(theme){
         $('.task_actions_delete_Top').attr('src', './imgs/bin top part.png')
         $('.task_actions_delete_Bottom').attr('src', './imgs/bin bottom part.png')
         $('.addNewTaskPopup').css('background-color', '#fff')
+        $('.editTaskPopup').css('background-color', '#fff')
         $('i').css('color', '#333')
         $('input').css('background-color', '#fff')
         $('input').css('border', '1px #333 solid')
@@ -182,6 +183,26 @@ function changeTheme(theme){
                 });
             }
         );
+        $('#saveChanges').css('background-color', '#fff')
+        $('#saveChanges').css('border', '1px #6D87E2 solid')
+        $('#saveChanges').css('color', '#6D87E2')
+        $('#saveChanges').hover(
+            () => {
+                $('#saveChanges').css({
+                    'background-color': '#6D87E2',
+                    'color': '#fff',
+                    'border': '#fff 1px solid',
+                });
+            },
+            () => {
+                $('#saveChanges').css({
+                    'background-color': '#fff',
+                    'color': '#6D87E2',
+                    'border': '#6D87E2 1px solid',
+
+                });
+            }
+        );
 
     }else{
         $('.header_themeChanger').attr('src', './imgs/dark theme changer.png')
@@ -196,6 +217,7 @@ function changeTheme(theme){
         $('.task_actions_delete_Top').attr('src', './imgs/dark bin top part.png')
         $('.task_actions_delete_Bottom').attr('src', './imgs/dark bin bottom part.png')
         $('.addNewTaskPopup').css('background-color', '#333')
+        $('.editTaskPopup').css('background-color', '#333')
         $('i').css('color', '#fff')
         $('input').css('background-color', '#333')
         $('input').css('border', '1px #fff solid')
@@ -203,8 +225,6 @@ function changeTheme(theme){
         $('#addTask').css('border', '1px #6D87E2 solid')
         $('#addTask').css('color', '#6D87E2')
         $('.addNewTask_Plus').css('color', '#333')
-
-
         $('#addTask').hover(
             () => {
                 $('#addTask').css({
@@ -215,6 +235,26 @@ function changeTheme(theme){
             },
             () => {
                 $('#addTask').css({
+                    'background-color': '#333',
+                    'color': '#6D87E2',
+                    'border': '#6D87E2 1px solid',
+
+                });
+            }
+        );
+        $('#saveChanges').css('background-color', '#333')
+        $('#saveChanges').css('border', '1px #6D87E2 solid')
+        $('#saveChanges').css('color', '#6D87E2')
+        $('#saveChanges').hover(
+            () => {
+                $('#saveChanges').css({
+                    'background-color': '#6D87E2',
+                    'color': '#333',
+                    'border': '#333 1px solid',
+                });
+            },
+            () => {
+                $('#saveChanges').css({
                     'background-color': '#333',
                     'color': '#6D87E2',
                     'border': '#6D87E2 1px solid',

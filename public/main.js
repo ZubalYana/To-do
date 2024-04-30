@@ -98,6 +98,7 @@ $('.task_editAction').click(e => {
             axios.put(`http://localhost:3000/edit-task/${ID}`, data)
                 .then(res => {
                     $('.editTaskPopup_container').css('display', 'none')
+                    location.reload();
 
                 })
         })

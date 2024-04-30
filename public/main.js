@@ -91,7 +91,9 @@ $('.task_editAction').click(e => {
         console.log(ID);
         $('#saveChanges').click(()=>{
             let data = {
-                title: $('#newTaskTitle').val()
+                title: $('#newTaskTitle').val(),
+                description: $('#newTaskDescription').val(),
+                deadline: $('#newTaskDeadline').val(),
             };
             axios.put(`http://localhost:3000/edit-task/${ID}`, data)
                 .then(res => {

@@ -17,14 +17,14 @@ axios.get('http://localhost:3000/tasks')
             <div class="task_titleAndActionsCon">
             <div class="task_title">${task.title}</div>
             <div class="task_actions">
-            <div class="task_actions_edit" id='edit${task._id}'>
-            <img class="task_editAction" src="./imgs/pen.png" alt="">
+            <div class="task_actions_edit">
+            <img class="task_editAction" src="./imgs/pen.png" alt=""  id='edit${task._id}'>
             <img class="task_actions_edit_decoration" id="task_actions_edit_decoration1" src="./imgs/edit decoration.png">
             <img class="task_actions_edit_decoration" id="task_actions_edit_decoration2" src="./imgs/edit decoration.png">
             </div>
-            <div class="task_actions_delete" id='${task._id}'>
+            <div class="task_actions_delete">
             <img class="task_actions_delete_Top" src="./imgs/bin top part.png" alt="">
-            <img class="task_actions_delete_Bottom" src="./imgs/bin bottom part.png" alt="">
+            <img class="task_actions_delete_Bottom"  id='${task._id}' src="./imgs/bin bottom part.png" alt="">
             </div>
             </div>
             </div>
@@ -54,7 +54,7 @@ $('.task_actions_delete').hover(
         $(this).find('.task_actions_delete_Top').removeClass('delete-hover');
     }
 );  
-$('.task_actions_delete').click((e)=>{
+$('.task_actions_delete_Bottom').click((e)=>{
     console.log(e.target)
     let id = e.target.id;
     console.log(id)
@@ -64,56 +64,46 @@ $('.task_actions_delete').click((e)=>{
 
     })
 })
-$('.task_actions_edit').click(e => {
+
+// $('.task_editAction').click(e => {
+//     let ID = e.target.id;
+//     if (ID.substring(0, 4) == 'edit') {
+//         ID = ID.substring(4);
+//         console.log(ID);
+//         let data = {
+//             title: prompt('Введи нове завдання')
+//         };
+//         axios.put(`http://localhost:3000/edit-task/${ID}`, data)
+//             .then(res => {
+//                 alert('Дані оновлено');
+//             })
+//     }
+// });
+
+
+
+$('.task_editAction').click(e => {
     let ID = e.target.id;
+    $('.editTaskPopup_container').css('display', 'flex')
+
     if (ID.substring(0, 4) == 'edit') {
         ID = ID.substring(4);
         console.log(ID);
-        let data = {
-            title: prompt('Введи нове завдання')
-        };
-        axios.put(`http://localhost:3000/edit-task/${ID}`, data)
-            .then(res => {
-                alert('Дані оновлено');
-            })
+        $('#saveChanges').click(()=>{
+            let data = {
+                title: $('#newTaskTitle').val()
+            };
+            axios.put(`http://localhost:3000/edit-task/${ID}`, data)
+                .then(res => {
+                    alert('Дані оновлено');
+                })
+        })
+
     }
 });
 
 
 
-
-
-
-
-
-
-
-// let ID; // Declare ID variable outside the click event handler
-
-// $('.task_actions_edit').click(e => {
-//     $('.editTaskPopup_container').css('display', 'flex');
-//     ID = e.target.id; // Assign value to ID here
-//     if (ID.substring(0, 4) == 'edit') {
-//         ID = ID.substring(4);
-//         console.log(ID);
-//         // Your code to show the popup and retrieve task data
-//     }
-// });
-
-// $('#saveChanges').click(() => {
-//     let data = {
-//         title: $('#newTaskTitle').val()
-//     };
-//     axios.put(`http://localhost:3000/edit-task/${ID}`, data)
-//         .then(res => {
-//             alert('Дані оновлено');
-//             $('.editTaskPopup_container').css('display', 'none');
-//         })
-//         .catch(err => {
-//             alert('Error updating data');
-//             console.error(err);
-//         });
-// });
 
 
 

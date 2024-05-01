@@ -1,5 +1,5 @@
 //tasks functionality ( adding, deleting, editing )
-axios.get('http://localhost:3000/tasks')
+axios.get('https://to-do-tl60.onrender.com/tasks')
 .then((res)=>{
     console.log(res.data);
     const tasks = res.data;
@@ -105,7 +105,7 @@ $('#addTask').click(()=>{
         deadline: $('#task_deadline').val(),
         createdTime: Date.now()
     }
-    axios.post('http://localhost:3000/add-task', data)
+    axios.post('https://to-do-tl60.onrender.com/add-task', data)
     .then(res=>{
         console.log(res.data);
         location.href = '/';

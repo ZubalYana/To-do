@@ -58,7 +58,7 @@ $('.task_actions_delete_Bottom').click((e)=>{
     console.log(e.target)
     let id = e.target.id;
     console.log(id)
-    axios.delete(`http://localhost:3000/task/${id}`)
+    axios.delete(`https://to-do-tl60.onrender.com/task/${id}`)
     .then(res => {
         location.reload()
 
@@ -79,7 +79,7 @@ $('.task_editAction').click(e => {
                 description: $('#newTaskDescription').val(),
                 deadline: $('#newTaskDeadline').val(),
             };
-            axios.put(`http://localhost:3000/edit-task/${ID}`, data)
+            axios.put(`https://to-do-tl60.onrender.com/edit-task/${ID}`, data)
                 .then(res => {
                     $('.editTaskPopup_container').css('display', 'none')
                     location.reload();

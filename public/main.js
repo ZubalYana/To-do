@@ -29,7 +29,7 @@ axios.get('https://to-do-tl60.onrender.com/tasks')
             </div>
             </div>
             <div class="task_description">${task.description}</div>
-            <div class="task_neededTime">Created time: <div class="task_time">${createdTime}</div></div>
+            <div class="task_neededTime">Created: <div class="task_time">${createdTime}</div></div>
             <div class="task_neededTime">Deadline: <div class="task_time">${task.deadline}</div></div>
         </div>`
         )

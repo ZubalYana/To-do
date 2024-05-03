@@ -232,7 +232,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     .addNewTaskPopup{
         width: 600px;
@@ -295,7 +295,7 @@
     display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     .editTaskPopup{
         width: 600px;

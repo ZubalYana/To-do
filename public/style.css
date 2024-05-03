@@ -234,7 +234,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
 }
 .addNewTaskPopup_container .addNewTaskPopup {
@@ -298,7 +298,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
 }
 .editTaskPopup_container .editTaskPopup {

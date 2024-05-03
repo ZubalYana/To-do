@@ -349,11 +349,6 @@ window.onhashchange = changeLanguage;
 //cookies
 $(document).ready(function() {
     checkPopupCookie();
-    
-    $("#acceptCookiesBtn").click(function() {
-        console.log("Accept cookies button clicked.");
-        closePopup();
-    });
 });
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -383,7 +378,12 @@ function checkPopupCookie() {
         $(".cookiesPopupContainer").css('display', 'none');
     } else {
         console.log("No popup cookie detected. Showing popup.");
-        $(".cookiesPopupContainer").css('display', 'flex'); 
+        $(".cookiesPopupContainer").css('display', 'flex');
+        
+        $("#acceptCookiesBtn").click(function() {
+            console.log("Accept cookies button clicked.");
+            closePopup();
+        });
     }
 }
 function closePopup() {
@@ -391,6 +391,7 @@ function closePopup() {
     $(".cookiesPopupContainer").css('display', 'none');
     setCookie("popupClosed", "true", 365);
 }
+
 
 
 //cookies animation & the button hover

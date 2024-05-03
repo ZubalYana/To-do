@@ -26,6 +26,16 @@
   .addNewTaskPopup_container .addNewTaskPopup .addNewTaskPopup_inputsCon input {
     width: 100%;
   }
+  .editTaskPopup_container .editTaskPopup {
+    width: 85%;
+    height: 350px;
+  }
+  .editTaskPopup_container .editTaskPopup h1 {
+    font-size: 28px;
+  }
+  .editTaskPopup_container .editTaskPopup input {
+    width: 100%;
+  }
   .cookiesPopupContainer .cookiePopup {
     width: 85%;
     flex-direction: column;

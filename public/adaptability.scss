@@ -35,6 +35,19 @@
 
         }
     }
+    .editTaskPopup_container{
+        .editTaskPopup{
+            width: 85%;
+            height: 350px;
+            h1{
+                font-size: 28px;
+            }
+            input{
+                width: 100%;
+            }
+
+        }
+    }
     .cookiesPopupContainer{
         .cookiePopup{
             width: 85%;
